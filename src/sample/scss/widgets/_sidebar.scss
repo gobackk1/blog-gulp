@@ -1,0 +1,50 @@
+.side-bnr {
+  @include mediaQuery(pc) {
+    z-index: 20000;
+    position: fixed;
+    right: 0;
+    top: 30%;
+    width: 101px;
+    &__item {
+      display: block;
+      max-width: 100%;
+      img {
+        vertical-align: bottom;
+      }
+    }
+  }
+  @include mediaQuery(tab){
+    width: 70px;
+  }
+}
+
+.bot-bnr {
+  @include mediaQuery(sp) {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    width: 100%;
+    z-index: 1;
+    &__top {
+      position: absolute;
+      top: -$pagetop_height + px;
+      right: 0;
+    }
+    &__item {
+      width: 50%;
+      // width: 33.3333%;
+      img {
+        vertical-align: bottom;
+      }
+    }
+  }
+  @include mediaQuery(pc) {
+    &__top {
+      position: fixed;
+      bottom: 0;
+      right: 0;
+      z-index: 1;
+    }
+  }
+}

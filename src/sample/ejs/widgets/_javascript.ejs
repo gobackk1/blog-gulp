@@ -1,0 +1,27 @@
+<script>
+  $('.slider').slick({
+    autoplay: true,
+    arrows: false,
+    fade: true,
+    centerMode: true,
+    centerPadding: '20%',
+    responsive: [{
+      breakpoint: 2000,
+      settings: {
+        speed: 2000,
+        autoplaySpeed: 2000,
+        arrows: false,
+        centerPadding: '8%',
+      }
+    }, {
+      breakpoint: 767,
+      settings: {
+        speed: 2000,
+        autoplaySpeed: 2000,
+        arrows: false,
+        centerMode: false,
+      }
+    }]
+  });
+  $("#menu-header-nav .sub-menu").parent('li').addClass('has-child');
+</script>

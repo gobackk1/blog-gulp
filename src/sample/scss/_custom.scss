@@ -1,0 +1,59 @@
+//各セクション
+%section {
+  padding: ($sec_pad / 2) + px 0;
+  // p {
+  //   margin: 0;
+  // }
+  .topinner {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+  @media (min-width: 768px) {
+    padding: $sec_pad + px 0;
+  }
+}
+
+.info {
+  @extend %section;
+  background: $color_accent_light;
+}
+
+.sample {
+  @extend %section;
+  background: $color_primary_light;
+  .topwide{
+    background: #ddd;
+  }
+}
+
+.sample1 {
+  @extend %section;
+  background: $color_secondary_light;
+}
+
+.sample2 {
+  @extend %section;
+  background: $color_accent_light;
+}
+
+//mixin
+.btn-sample {
+  @include btnTemplate(#fff, #000, 8px, 0);
+}
+
+.solidArrow {
+  @include solidArrow(top, 10px, 2px, #000, 20);
+}
+
+.fillArrow {
+  @include fillArrow(top, 20px, #000, narrow);
+}
+
+.f-gridLayout {
+  @include f-gridLayout($column: 4, $rowgap: 2, $spmb: 20, $spcol2: false);
+}
+
+.pagetop {
+  @include pagetop(60px, #fff, #000);
+}

@@ -1,0 +1,50 @@
+.header {
+  @include mediaQuery(pc) {
+    padding: 30px 0 35px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &__logo {
+      width: $header_logo_width + px; //
+      max-width: 100%;
+      margin-right: -4%;
+      @media (min-width: 768px) and (max-width: 1050px) {
+        margin-right: 20px;
+      }
+    }
+  }
+  @include mediaQuery(sp) {
+    padding: 10px;
+    &__logo {
+      text-align: center;
+    }
+  }
+}
+
+// @include mediaQuery(pc) {
+//   %hdr-link-item {
+//     margin: 7px 0 0 0;
+//   }
+// }
+
+// .hdr-link {
+//   @include mediaQuery(pc) {
+//     margin-top: -7px;
+//     display: flex;
+//     flex-wrap: wrap;
+//     justify-content: space-between;
+//     align-items: center;
+//     &__emer {
+//       @extend %hdr-link-item;
+//       width: percentage(190 / $header_info_width);
+//     }
+//     &__women {
+//       @extend %hdr-link-item;
+//       width: percentage(190 / $header_info_width);
+//     }
+//     &__kids {
+//       @extend %hdr-link-item;
+//       width: percentage(190 / $header_info_width);
+//     }
+//   }
+// }

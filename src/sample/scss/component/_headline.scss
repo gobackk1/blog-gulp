@@ -1,0 +1,106 @@
+//大見出し
+%title-l {
+  margin: 0 0 1em;
+  position: relative;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 1.5;
+  letter-spacing: 0.08em;
+  word-break: break-all;
+  font-family: $title_font_family;
+}
+
+.title-l {
+  @extend %title-l;
+  img {
+    display: block;
+    margin: 0 auto 15px;
+  }
+  span {
+    letter-spacing: inherit;
+  }
+  &.typeB {
+    display: table;
+    color: inherit;
+    text-align: left;
+  }
+  &.typeC {
+    display: table;
+    border-bottom: 1px solid $color_primary;
+    margin: 0 auto 2em;
+    letter-spacing: 0.2em;
+    span {
+      color: $color_primary;
+      position: relative;
+      @include mediaQuery(pc) {
+        &::before {
+          position: absolute;
+          content: "";
+          display: block;
+          width: 45px;
+          height: 24px;
+          background: url(img/img006.png) no-repeat center/cover;
+          top: -27px;
+          left: -8px;
+        }
+      }
+    }
+    @include mediaQuery(pc) {
+      font-size: 40px;
+    }
+    @include mediaQuery(tab) {
+      font-size: 30px;
+    }
+  }
+  @include mediaQuery(pc) {
+    font-size: 30px;
+  }
+  // &--type01 {
+  //   @extend %title-l;
+  // }
+}
+
+//中見出し
+
+%title-m {
+  position: relative;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 1.5;
+  letter-spacing: 0.05em;
+  font-family: $title_font_family;
+}
+
+.title-m {
+  @extend %title-m;
+  @include mediaQuery(pc) {
+    text-align: center;
+  }
+}
+
+//小見出し
+%title-s {
+  margin: 0 0 0.7em;
+  font-size: 16px !important;
+  font-weight: bold;
+  line-height: 1.5;
+  letter-spacing: 0.1em;
+  font-family: $title_font_family;
+}
+
+.title-s {
+  @extend %title-s;
+}
+
+// .title-band {
+//   padding: 10px;
+//   background: url(img/sp_greeting_bg_l.png) no-repeat left/contain, url(img/sp_greeting_bg_r.png) no-repeat right/contain, url(img/pt_bg001.jpg);
+//   [class*="title"] {
+//     margin: 0;
+//   }
+//   @include mediaQuery(pc) {
+//     padding: 60px 0;
+//     background: url(img/greeting_bg_l.png) no-repeat left/contain, url(img/greeting_bg_r.png) no-repeat right/contain, url(img/pt_bg001.jpg);
+//   }
+// }

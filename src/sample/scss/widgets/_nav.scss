@@ -1,0 +1,13 @@
+.line-2 {
+  @include mediaQuery(pc) {
+    .sub-menu {
+      width: 200% !important;
+      display: flex !important;
+      flex-wrap: wrap;
+      left: -50% !important;
+    }
+    li {
+      width: 50% !important;
+    }
+  }
+}

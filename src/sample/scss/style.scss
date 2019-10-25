@@ -1,0 +1,11 @@
+@charset "UTF-8";
+@import "abstract/**";
+@import "base/**";
+
+//ここにcssを挿入して変数を埋め込んでいく
+
+@import "layout/**";
+@import "utility/**";
+@import "widgets/**";
+@import "component/**";
+@import "_custom";

@@ -1,0 +1,39 @@
+%list-item {
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+  }
+}
+
+.list-A {
+  margin-bottom: 20px;
+  ul {
+    margin: 0 0 0 20px;
+  }
+  &__item {
+    @extend %list-item;
+    padding: 1px 0 1px 15px;
+    &::before {
+      left: -3px;
+      @include solidArrow(right, 8px, 1px, $color_text, -20);
+    }
+  }
+}
+
+.list-B {
+  margin-bottom: 20px;
+  &__item {
+    @extend %list-item;
+    padding: 2px 0 2px 12px;
+    &::before {
+      left: 0;
+      width: 6px;
+      height: 2px;
+      background: $color_text;
+    }
+  }
+}
