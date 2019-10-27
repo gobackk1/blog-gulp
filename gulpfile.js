@@ -98,8 +98,8 @@
       .pipe(
         data(file => {
           const absolutePath = `/${file.path
-            .split('src\\fix\\ejs')
-          [file.path.split('src\\fix\\ejs').length - 1].replace('.ejs', '.html')
+            .split('src\\' + env.file + '\\ejs')
+          [file.path.split('src\\' + env.file + '\\ejs').length - 1].replace('.ejs', '.html')
             .replace(/index\.html$/, '')}`;
           const relativePath = '../'.repeat([absolutePath.split('\\').length - 2]);
           return {
@@ -107,7 +107,7 @@
             relativePath
           };
         }),
-      )
+        )
       .pipe(ejs({
         site: JSON.parse(fs.readFileSync(`${setting.path.root.src}site.json`)),
       }))
