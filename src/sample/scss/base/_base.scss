@@ -29,3 +29,7 @@ small {
     font-size: 90%;
   }
 }
+
+*,*::before,*::after{
+  box-sizing: border-box;
+}

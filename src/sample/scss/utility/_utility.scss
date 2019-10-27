@@ -60,3 +60,15 @@
     }
   }
 }
+
+.sp{
+  @include mediaQuery(pc){
+    display: none!important;
+  }
+}
+
+.ps{
+  @include mediaQuery(sp){
+    display: none!important;
+  }
+}
